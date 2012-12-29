@@ -25,7 +25,7 @@ S="${WORKDIR}/build"
 
 src_install(){
 	distutils_src_install
-	#newinitd "${S}"/debian/autokey-gtk.init autokey || die
+	newinitd "${S}"/debian/autokey-gtk.init autokey || die
 }
 
 pkg_postinst () {
