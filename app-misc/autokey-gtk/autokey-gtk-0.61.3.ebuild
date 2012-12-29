@@ -12,7 +12,7 @@ SRC_URI="http://autokey.googlecode.com/files/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND=">=dev-python/python-xlib-0.14
