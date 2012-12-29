@@ -1,0 +1,20 @@
+# ChangeLog for app-misc/autokey-gtk
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  19 Jul 2011; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  autokey-gtk-0.61.3.ebuild:
+  Forced move to EAPI-3 from distutils eclass
+
+  05 Mar 2010; Angelo D'Autilia (sYdRo) <sydro@salug.it>
+  -autokey-gtk-0.60.7a.ebuild, +autokey-gtk-0.61.3.ebuild:
+  Version bump to autokey-gtk-0.61.3
+
+  01 Nov 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> ChangeLog,
+  Manifest:
+  Add missing bugnumber to ChangeLog
+
+  26 Oct 2009; Roelof Wobben <rwobben@hotmail.com>
+  +autokey-gtk-0.60.7a.ebuild, +metadata.xml:
+  New Ebuild thanks to Tommy[D] and John R Graham
+  for bug 290502
