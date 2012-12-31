@@ -27,5 +27,4 @@ ruby_add_rdepend "dev-ruby/highline
 
 each_ruby_install() {
 	each_fakegem_install
-	ruby_fakegem_doins VERSION
 }
