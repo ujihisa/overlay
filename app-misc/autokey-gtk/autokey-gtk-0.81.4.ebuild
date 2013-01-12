@@ -21,11 +21,11 @@ DEPEND=">=dev-python/python-xlib-0.14
 
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/build"
+S="${WORKDIR}/autokey-0.81.4/"
 
-#src_configure() {
-#	epatch "${FILESDIR}/uji.patch"
-#}
+src_configure() {
+	epatch "${FILESDIR}/uji.patch"
+}
 
 src_install(){
 	distutils_src_install
