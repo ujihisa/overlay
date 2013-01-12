@@ -23,9 +23,9 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/build"
 
-src_configure() {
-	epatch "${FILESDIR}/uji.patch"
-}
+#src_configure() {
+#	epatch "${FILESDIR}/uji.patch"
+#}
 
 src_install(){
 	distutils_src_install
