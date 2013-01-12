@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND=">=dev-python/python-xlib-0.14
-	dev-python/notify-python
+	dev-python/pyinotify
 	dev-python/pygtk"
 
 RDEPEND="${DEPEND}"
