@@ -24,7 +24,6 @@ IUSE=""
 RDEPEND=""
 DEPEND="${RDEPEND}
 	>=virtual/jre-1.6
-	dev-lang/clojure-contrib
 	"
 
 src_install() {
