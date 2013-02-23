@@ -26,6 +26,6 @@ S="${WORKDIR}"
 
 src_install() {
 	mkdir bin
-	mv lein bin/
+	mv distdir/lein bin/
 	dobin bin/lein
 }
