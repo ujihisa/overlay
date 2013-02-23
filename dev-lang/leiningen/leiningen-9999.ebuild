@@ -30,5 +30,8 @@ src_install() {
 	ls -a "${DISTDIR}"
 	cp "${DISTDIR}/lein" "${S}/bin/"
 	chmod +x "${S}/bin/lein"
-	dobin bin/lein
+}
+
+pkg_postinst () {
+	echo "run lein command to download the actual leiningen"
 }
