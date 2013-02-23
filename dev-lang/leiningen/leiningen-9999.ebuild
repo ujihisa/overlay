@@ -26,6 +26,9 @@ S="${WORKDIR}"
 
 src_install() {
 	mkdir "${S}/bin"
-	mv "${DISTDIR}/lein ${S}/bin/"
+	ls -a "${S}/bin"
+	ls -a "${DISTDIR}"
+	cp "${DISTDIR}/lein ${S}/bin/"
+	chmod +x "${S}/bin/lein"
 	dobin bin/lein
 }
