@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}"
 
 src_install() {
-	mkdir bin
-	mv distdir/lein bin/
+	mkdir "${S}/bin"
+	mv "${DISTDIR}/lein ${S}/bin/"
 	dobin bin/lein
 }
