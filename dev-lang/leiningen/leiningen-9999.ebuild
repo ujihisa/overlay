@@ -5,15 +5,11 @@
 EAPI="5"
 DISTUTILS_SRC_TEST=""
 
-EGIT_REPO_URI="git://github.com/technomancy/leiningen.git
-	https://github.com/technomancy/leiningen.git"
-
-inherit git-2
-
 MY_P="${MY_PN}-${PV/_/-}"
 
 DESCRIPTION="Automate Clojure projects without setting your hair on fire"
 HOMEPAGE="https://github.com/technomancy/leiningen"
+SRC_URI="https://raw.github.com/technomancy/leiningen/stable/bin/lein"
 
 LICENSE="EPL"
 SLOT="0"
