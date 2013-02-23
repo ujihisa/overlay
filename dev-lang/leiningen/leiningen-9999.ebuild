@@ -22,6 +22,8 @@ DEPEND="${RDEPEND}
 	>=virtual/jre-1.6
 	"
 
+S="${WORKDIR}"
+
 src_install() {
 	dobin bin/lein
 }
