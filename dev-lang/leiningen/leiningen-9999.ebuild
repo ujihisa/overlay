@@ -28,7 +28,7 @@ src_install() {
 	mkdir "${S}/bin"
 	ls -a "${S}/bin"
 	ls -a "${DISTDIR}"
-	cp "${DISTDIR}/lein ${S}/bin/"
+	cp "${DISTDIR}/lein" "${S}/bin/"
 	chmod +x "${S}/bin/lein"
 	dobin bin/lein
 }
