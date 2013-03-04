@@ -43,6 +43,10 @@ src_install() {
 	#cp -r "${DISTDIR}/lib/" "${S}/lib/"
 }
 
+src_install() {
+	cp "bin/gradle" "/usr/bin/gradle"
+}
+
 pkg_postinst () {
 	echo "cool"
 #	echo "run lein command to download the actual leiningen"
