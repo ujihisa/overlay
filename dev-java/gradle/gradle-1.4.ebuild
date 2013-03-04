@@ -24,13 +24,22 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}"
 
 src_install() {
-	mkdir "${S}/bin"
-	ls -a "${S}/bin"
-	ls -a "${DISTDIR}"
-	cp -r "${DISTDIR}/bin/gradle" "${S}/bin/gradle"
-	chmod +x "${S}/bin/gradle"
-	mkdir "${S}/lib"
-	cp -r "${DISTDIR}/lib/" "${S}/lib/"
+	cp "${DISTDIR}/gradle-1.4-bin.zip" "${S}"
+
+	cd "${S}"
+	unzip "gradle-1.4-bin.zip"
+	cd -
+
+	mv "${S}/gradle-1.4/bin" "${S}/bin"
+	mv "${S}/gradle-1.4/lib" "${S}/lib"
+	tree
+	#mkdir "${S}/bin"
+	#ls -a "${S}/bin"
+	#ls -a "${DISTDIR}"
+	#cp -r "${DISTDIR}/bin/gradle" "${S}/bin/gradle"
+	#chmod +x "${S}/bin/gradle"
+	#mkdir "${S}/lib"
+	#cp -r "${DISTDIR}/lib/" "${S}/lib/"
 }
 
 #pkg_postinst () {
