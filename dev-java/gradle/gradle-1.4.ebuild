@@ -41,7 +41,7 @@ src_install() {
 	#chmod +x "${S}/bin/gradle"
 	#mkdir "${S}/lib"
 	#cp -r "${DISTDIR}/lib/" "${S}/lib/"
-	cp "${S}/bin/gradle" "/usr/bin/gradle"
+	chmod +x "${S}/bin/gradle"
 }
 
 pkg_postinst () {
