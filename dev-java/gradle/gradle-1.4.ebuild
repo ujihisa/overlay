@@ -25,12 +25,10 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}"
 
 src_unpack() {
-	cp "${DISTDIR}/gradle-1.4-bin.zip" "${S}"
+	#cp "${DISTDIR}/gradle-1.4-bin.zip" "${S}"
 
-	cd "${S}"
-	unpack "gradle-1.4-bin.zip"
-	rm "gradle-1.4-bin.zip"
-	cd -
+	unpack "${DISTDIR}/gradle-1.4-bin.zip"
+	#rm "gradle-1.4-bin.zip"
 }
 
 src_install() {
