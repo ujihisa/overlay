@@ -24,14 +24,9 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}"
 
-src_unpack() {
-	#cp "${DISTDIR}/gradle-1.4-bin.zip" "${S}"
-
-	unpack "${DISTDIR}/gradle-1.4-bin.zip"
-	#rm "gradle-1.4-bin.zip"
-}
-
 src_install() {
+	echo 'src_install'
+	tree "${S}"
 	mkdir "${S}/bin"
 	cp "${S}/gradle-1.4/bin/gradle" "${S}/bin/gradle"
 	mkdir "${S}/lib"
