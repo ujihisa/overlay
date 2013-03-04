@@ -44,7 +44,7 @@ src_install() {
 }
 
 src_install() {
-	cp "bin/gradle" "/usr/bin/gradle"
+	cp "${S}/bin/gradle" "/usr/bin/gradle"
 }
 
 pkg_postinst () {
