@@ -31,6 +31,9 @@ src_install() {
 	cp "${S}/gradle-1.4/bin/gradle" "${S}/bin/gradle"
 	mkdir "${S}/lib"
 	mv "${S}/gradle-1.4/lib/" "${S}/lib/"
+
+	rm -r "${S}/gradle-1.4"
+
 	#mkdir "${S}/bin"
 	#ls -a "${S}/bin"
 	#ls -a "${DISTDIR}"
