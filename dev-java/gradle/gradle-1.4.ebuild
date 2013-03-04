@@ -19,18 +19,21 @@ IUSE=""
 RDEPEND=""
 DEPEND="${RDEPEND}
 	>=virtual/jre-1.6
+	app-arch/unzip
 	"
 
 S="${WORKDIR}"
 
-src_install() {
+src_unpack() {
 	cp "${DISTDIR}/gradle-1.4-bin.zip" "${S}"
 
 	cd "${S}"
-	unzip "gradle-1.4-bin.zip"
+	unpack "gradle-1.4-bin.zip"
 	rm "gradle-1.4-bin.zip"
 	cd -
+}
 
+src_install() {
 	mkdir "${S}/bin"
 	cp "${S}/gradle-1.4/bin/gradle" "${S}/bin/gradle"
 	mkdir "${S}/lib"
