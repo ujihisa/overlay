@@ -32,6 +32,7 @@ src_install() {
 
 	mv "${S}/gradle-1.4/bin" "${S}/bin"
 	mv "${S}/gradle-1.4/lib" "${S}/lib"
+	tree "${S}"
 	#mkdir "${S}/bin"
 	#ls -a "${S}/bin"
 	#ls -a "${DISTDIR}"
