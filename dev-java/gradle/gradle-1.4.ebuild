@@ -28,11 +28,14 @@ src_install() {
 
 	cd "${S}"
 	unzip "gradle-1.4-bin.zip"
+	rm "gradle-1.4-bin.zip"
 	cd -
 
-	mv "${S}/gradle-1.4/bin" "${S}/bin"
-	mv "${S}/gradle-1.4/lib" "${S}/lib"
-	tree "${S}"
+	mkdir "${S}/bin"
+	cp "${S}/gradle-1.4/bin/gradle" "${S}/bin/gradle"
+	mkdir "${S}/lib"
+	cp "${S}/gradle-1.4/lib/*" "${S}/lib/"
+	tree "${S}" | head -20
 	#mkdir "${S}/bin"
 	#ls -a "${S}/bin"
 	#ls -a "${DISTDIR}"
