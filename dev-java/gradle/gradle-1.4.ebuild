@@ -26,12 +26,11 @@ S="${WORKDIR}"
 
 src_install() {
 	echo 'src_install'
-	tree "${S}"
+	#tree "${S}"
 	mkdir "${S}/bin"
 	cp "${S}/gradle-1.4/bin/gradle" "${S}/bin/gradle"
 	mkdir "${S}/lib"
-	cp "${S}/gradle-1.4/lib/*" "${S}/lib/"
-	tree "${S}" | head -20
+	mv "${S}/gradle-1.4/lib/" "${S}/lib/"
 	#mkdir "${S}/bin"
 	#ls -a "${S}/bin"
 	#ls -a "${DISTDIR}"
