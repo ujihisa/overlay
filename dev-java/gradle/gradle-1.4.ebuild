@@ -25,10 +25,10 @@ S="${WORKDIR}"
 
 src_install() {
 	mkdir "${S}/bin"
-	#ls -a "${S}/bin"
-	#ls -a "${DISTDIR}"
-	cp "${DISTDIR}/lein" "${S}/bin/"
-	chmod +x "${S}/bin/lein"
+	ls -a "${S}/bin"
+	ls -a "${DISTDIR}"
+	cp -r "${DISTDIR}/bin/gradle" "${S}/bin/gradle"
+	chmod +x "${S}/bin/gradle"
 	mkdir "${S}/lib"
 	cp -r "${DISTDIR}/lib/" "${S}/lib/"
 }
