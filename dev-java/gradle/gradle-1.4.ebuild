@@ -32,7 +32,6 @@ src_install() {
 
 	mv "${S}/gradle-1.4/bin" "${S}/bin"
 	mv "${S}/gradle-1.4/lib" "${S}/lib"
-	tree
 	#mkdir "${S}/bin"
 	#ls -a "${S}/bin"
 	#ls -a "${DISTDIR}"
@@ -42,6 +41,7 @@ src_install() {
 	#cp -r "${DISTDIR}/lib/" "${S}/lib/"
 }
 
-#pkg_postinst () {
+pkg_postinst () {
+	echo "cool"
 #	echo "run lein command to download the actual leiningen"
-#}
+}
