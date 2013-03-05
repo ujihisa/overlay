@@ -13,7 +13,7 @@ SRC_URI="http://services.gradle.org/distributions/gradle-1.4-bin.zip"
 
 LICENSE="ASIS"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 # NOTE: you need the java-overlay for this ebuild to work
