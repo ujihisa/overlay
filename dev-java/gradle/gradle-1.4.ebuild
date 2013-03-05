@@ -26,35 +26,9 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}"
 
 src_install() {
-	#echo 'src_install'
-	##tree "${S}"
-	#mkdir "${S}/bin"
-	#cp "${S}/gradle-1.4/bin/gradle" "${S}/bin/gradle"
-	#mkdir "${S}/lib"
-	#mv "${S}/gradle-1.4/lib/" "${S}/lib/"
-
-	#rm -r "${S}/gradle-1.4"
-
-	##mkdir "${S}/bin"
-	##ls -a "${S}/bin"
-	##ls -a "${DISTDIR}"
-	##cp -r "${DISTDIR}/bin/gradle" "${S}/bin/gradle"
-	##chmod +x "${S}/bin/gradle"
-	##mkdir "${S}/lib"
-	##cp -r "${DISTDIR}/lib/" "${S}/lib/"
-	#chmod +x "${S}/bin/gradle"
-
-	#into "/usr/share/${P}"
-	#dobin gradle-1.4/bin/gradle
-	#dolib gradle-1.4/lib/
-	echo -e '#!/bin/sh\nexec /usr/share/gradle-1.4/bin/gradle ${@+"$@"}' > gradle
+	echo -e "#!/bin/sh\nexec sh /usr/share/${P}/bin/gradle \${@+\"$@\"}" > gradle
 	dobin gradle
 
 	insinto /usr/share
-	doins -r gradle-1.4
-}
-
-pkg_postinst () {
-	echo "cool"
-#	echo "run lein command to download the actual leiningen"
+	doins -r "${P}"
 }
