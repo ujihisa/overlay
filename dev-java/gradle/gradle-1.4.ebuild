@@ -4,7 +4,8 @@
 EAPI="5"
 DISTUTILS_SRC_TEST=""
 
-MY_P="${MY_PN}-${PV/_/-}"
+#MY_P="${MY_PN}-${PV/_/-}"
+MY_P="${PV/_/-}"
 
 DESCRIPTION="Automate *Groovy* projects without setting your hair on fire"
 HOMEPAGE="http://www.gradle.org/"
@@ -43,13 +44,9 @@ src_install() {
 	##cp -r "${DISTDIR}/lib/" "${S}/lib/"
 	#chmod +x "${S}/bin/gradle"
 
-	echo '---'
-	echo "${P}"
-	echo "${MY_P}"
-	echo '---'
-	into /usr/share/gradle-1.4/
+	into "/usr/share/${P}"
 	dobin gradle-1.4/bin/gradle
-	dolib gradle-1.4/lib/*
+	dolib gradle-1.4/lib/*.jar
 }
 
 pkg_postinst () {
