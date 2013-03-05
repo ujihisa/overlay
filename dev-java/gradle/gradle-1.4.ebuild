@@ -11,7 +11,7 @@ DESCRIPTION="Automate *Groovy* projects without setting your hair on fire"
 HOMEPAGE="http://www.gradle.org/"
 SRC_URI="http://services.gradle.org/distributions/gradle-1.4-bin.zip"
 
-LICENSE="ASIS"
+LICENSE="ASL"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
 IUSE=""
