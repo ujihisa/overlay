@@ -25,25 +25,26 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}"
 
 src_install() {
-	echo 'src_install'
-	#tree "${S}"
-	mkdir "${S}/bin"
-	cp "${S}/gradle-1.4/bin/gradle" "${S}/bin/gradle"
-	mkdir "${S}/lib"
-	mv "${S}/gradle-1.4/lib/" "${S}/lib/"
-
-	rm -r "${S}/gradle-1.4"
-
+	#echo 'src_install'
+	##tree "${S}"
 	#mkdir "${S}/bin"
-	#ls -a "${S}/bin"
-	#ls -a "${DISTDIR}"
-	#cp -r "${DISTDIR}/bin/gradle" "${S}/bin/gradle"
-	#chmod +x "${S}/bin/gradle"
+	#cp "${S}/gradle-1.4/bin/gradle" "${S}/bin/gradle"
 	#mkdir "${S}/lib"
-	#cp -r "${DISTDIR}/lib/" "${S}/lib/"
-	chmod +x "${S}/bin/gradle"
-	dobin gradle
-	dolib lib/*
+	#mv "${S}/gradle-1.4/lib/" "${S}/lib/"
+
+	#rm -r "${S}/gradle-1.4"
+
+	##mkdir "${S}/bin"
+	##ls -a "${S}/bin"
+	##ls -a "${DISTDIR}"
+	##cp -r "${DISTDIR}/bin/gradle" "${S}/bin/gradle"
+	##chmod +x "${S}/bin/gradle"
+	##mkdir "${S}/lib"
+	##cp -r "${DISTDIR}/lib/" "${S}/lib/"
+	#chmod +x "${S}/bin/gradle"
+
+	dobin gradle-1.4/bin/gradle
+	dolib gradle-1.4/lib/*
 }
 
 pkg_postinst () {
