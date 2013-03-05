@@ -47,6 +47,9 @@ src_install() {
 	#into "/usr/share/${P}"
 	#dobin gradle-1.4/bin/gradle
 	#dolib gradle-1.4/lib/
+	echo -e '#!/bin/sh\nexec /usr/share/gradle-1.4/bin/gradle ${@+"$@"}' > gradle
+	dobin gradle
+
 	insinto /usr/share
 	doins -r gradle-1.4
 }
