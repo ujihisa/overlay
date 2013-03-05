@@ -42,8 +42,8 @@ src_install() {
 	#mkdir "${S}/lib"
 	#cp -r "${DISTDIR}/lib/" "${S}/lib/"
 	chmod +x "${S}/bin/gradle"
-	doins "bin/gradle"
-	doins "lib/*"
+	dobin gradle
+	dolib lib/*
 }
 
 pkg_postinst () {
