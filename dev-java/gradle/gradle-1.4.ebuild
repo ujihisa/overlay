@@ -45,8 +45,9 @@ src_install() {
 	#chmod +x "${S}/bin/gradle"
 
 	into "/usr/share/${P}"
-	dobin gradle-1.4/bin/gradle
-	dolib gradle-1.4/lib/*.jar
+	#dobin gradle-1.4/bin/gradle
+	#dolib gradle-1.4/lib/
+	doins -r gradle-1.4
 }
 
 pkg_postinst () {
