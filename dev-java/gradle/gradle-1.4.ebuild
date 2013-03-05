@@ -44,9 +44,10 @@ src_install() {
 	##cp -r "${DISTDIR}/lib/" "${S}/lib/"
 	#chmod +x "${S}/bin/gradle"
 
-	into "/usr/share/${P}"
+	#into "/usr/share/${P}"
 	#dobin gradle-1.4/bin/gradle
 	#dolib gradle-1.4/lib/
+	insinto /usr/share
 	doins -r gradle-1.4
 }
 
