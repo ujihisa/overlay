@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}"
 
 src_install() {
-	echo -e "#!/bin/sh\nexec sh /usr/share/${P}/bin/gradle \${@+\"$@\"}" > gradle
+	echo -e "#!/bin/sh\nexec sh /usr/share/${P}/bin/gradle \${@+\"\$@\"}" > gradle
 	dobin gradle
 
 	insinto /usr/share
