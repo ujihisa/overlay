@@ -8,6 +8,8 @@ USE_RUBY="ruby19"
 #RUBY_FAKEGEM_TASK_TEST=""
 #RUBY_S="termtter-termtter-ver.2.0.0"
 
+RUBY_FAKEGEM_GEMSPEC="termtter.gemspec"
+
 inherit ruby-fakegem
 
 DESCRIPTION="Termtter is a terminal based Twitter client."
