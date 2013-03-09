@@ -19,7 +19,7 @@ RDEPEND="|| ( >=virtual/jre-1.5 >=virtual/jdk-1.5 )"
 S="${WORKDIR}"
 
 src_install() {
-	echo -e "#!/bin/sh\nexec java -Djava.security.policy=/usr/share/${P}/example.policy -jar /usr/share/${P}/lib64/clojure-lingrbot-1.0.0-standalone.jar" > clojure-lingrbot
+	echo -e "#!/bin/sh\nexec java -Djava.security.policy=/usr/share/${P}/lib64/example.policy -jar /usr/share/${P}/lib64/clojure-lingrbot-1.0.0-standalone.jar" > clojure-lingrbot
 	dobin clojure-lingrbot
 
 	into "/usr/share/${P}"
