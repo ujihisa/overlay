@@ -6,7 +6,7 @@ EAPI=5
 
 DESCRIPTION="Clojure REPL bot for lingr"
 HOMEPAGE="https://github.com/ujihisa/clojure-lingrbot"
-SRC_URI="http://ujihisa.github.com/clojure-lingrbot/${P}-standalone.jar"
+SRC_URI="http://ujihisa.github.com/clojure-lingrbot/${P}.tgz"
 
 LICENSE="EPL-1.0"
 SLOT="0"
@@ -19,12 +19,10 @@ RDEPEND="|| ( >=virtual/jre-1.5 >=virtual/jdk-1.5 )"
 S="${WORKDIR}"
 
 src_install() {
-	echo -e "#!/bin/sh\nexec java -Djava.security.policy=/usr/share/${P}-example.policy -jar /usr/share/${P}/lib/clojure-lingrbot-1.0.0-SNAPSHOT-standalone.jar" > clojure-lingrbot
+	echo -e "#!/bin/sh\nexec java -Djava.security.policy=/usr/share/${P}/example.policy -jar /usr/share/${P}/lib/clojure-lingrbot-1.0.0-SNAPSHOT-standalone.jar" > clojure-lingrbot
 	dobin clojure-lingrbot
 
 	into /usr/share
-	dolib clojure-lingrbot-1.0.0-SNAPSHOT-standalone.jar
-
-	echo "grant { permission java.security.AllPermission; };" > "${P}-example.policy"
-	dolib "${P}-example.policy"
+	dolib "${P}/clojure-lingrbot-1.0.0-SNAPSHOT-standalone.jar"
+	dolib "${P}/example.policy"
 }
