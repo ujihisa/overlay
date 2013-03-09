@@ -17,9 +17,12 @@ DEPEND=""
 RDEPEND="|| ( >=virtual/jre-1.5 >=virtual/jdk-1.5 )"
 
 src_install() {
-	echo -e "#!/bin/sh\nexec java -Djava.security.policy=/usr/share/${P}/example.policy -jar /usr/share/${P}/lib/clojure-lingrbot-1.0.0-SNAPSHOT-standalone.jar" > clojure-lingrbot
+	echo -e "#!/bin/sh\nexec java -Djava.security.policy=/usr/share/${P}-example.policy -jar /usr/share/${P}/lib/clojure-lingrbot-1.0.0-SNAPSHOT-standalone.jar" > clojure-lingrbot
 	dobin clojure-lingrbot
 
-	insinto /usr/share
-	doins -r "${P}"
+	into /usr/share
+	dolib clojure-lingrbot-1.0.0-SNAPSHOT-standalone.jar
+
+	echo "grant { permission java.security.AllPermission; };" > "${P}-example.policy"
+	dolib "${P}-example.policy"
 }
