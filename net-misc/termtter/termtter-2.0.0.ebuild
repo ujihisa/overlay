@@ -6,7 +6,7 @@ EAPI=5
 
 USE_RUBY="ruby19"
 #RUBY_FAKEGEM_TASK_TEST=""
-#RUBY_S="termtter-termtter-ver.2.0.0"
+RUBY_S="termtter-termtter-2f7c3c8"
 
 RUBY_FAKEGEM_GEMSPEC="termtter.gemspec"
 
