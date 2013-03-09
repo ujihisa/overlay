@@ -4,7 +4,6 @@
 EAPI="5"
 MY_P="scala-2.10.1-RC3"
 
-ODO
 DESCRIPTION="The Scala Programming Language"
 HOMEPAGE="http://www.scala-lang.org/"
 
