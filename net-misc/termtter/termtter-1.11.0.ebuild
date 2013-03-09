@@ -5,7 +5,6 @@ EAPI=4
 
 USE_RUBY="ruby19"
 RUBY_FAKEGEM_TASK_TEST=""
-RUBY_S="jugyo-termtter-9fc2743"
 
 inherit ruby-fakegem
 
@@ -23,8 +22,3 @@ ruby_add_rdepend "dev-ruby/highline
 	dev-ruby/notify
 	dev-ruby/rubytter
 	dev-ruby/termcolor"
-
-each_ruby_install() {
-	each_fakegem_install
-	ruby_fakegem_doins VERSION
-}
