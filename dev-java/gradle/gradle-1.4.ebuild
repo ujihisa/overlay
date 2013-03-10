@@ -14,7 +14,7 @@ SRC_URI="http://services.gradle.org/distributions/gradle-1.4-bin.zip"
 LICENSE="ASL"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
-IUSE=""
+IUSE="binary"
 REQUIRED_USE="binary"
 
 RDEPEND=""
