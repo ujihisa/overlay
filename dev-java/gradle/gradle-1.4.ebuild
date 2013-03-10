@@ -30,6 +30,6 @@ src_install() {
 	#dobin gradle
 	dobin "${P}/bin/gradle"
 
-	into "/opt/${P}"
-	dolib "${P}"/lib/*.jar
+	insinto "/opt/${P}/lib"
+	doins -r "${P}/lib"
 }
