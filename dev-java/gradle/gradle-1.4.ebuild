@@ -28,11 +28,10 @@ S="${WORKDIR}"
 src_install() {
 	#echo -e "#!/bin/sh\nexec sh /usr/share/${P}/bin/gradle \${@+\"\$@\"}" > gradle
 	#dobin gradle
+	into "/opt/${P}"
 	dobin "${P}/bin/gradle"
+	dosym "/opt/${P}/bin/gradle" /usr/bin/gradle
 
 	insinto "/opt/${P}"
 	doins -r "${P}/lib"
-	doins -r "${P}/bin"
-
-	dosym "/opt/${P}/bin/gradle" /usr/bin/gradle
 }
