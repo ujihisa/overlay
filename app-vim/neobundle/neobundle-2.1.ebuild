@@ -12,6 +12,6 @@ LICENSE="MIT"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 SRC_URI="https://github.com/Shougo/neobundle.vim/archive/ver.${PV}.tar.gz -> ${P}.tar.gz"
-S="${WORKDIR}/ver.${PV}"
+S="${WORKDIR}/${PN}.vim-ver.${PV}"
 
 VIM_PLUGIN_HELPFILES="${PN}.txt"
