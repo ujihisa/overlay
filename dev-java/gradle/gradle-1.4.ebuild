@@ -32,4 +32,7 @@ src_install() {
 
 	insinto "/opt/${P}"
 	doins -r "${P}/lib"
+	doins -r "${P}/bin"
+
+	dosym /usr/bin/gradle "/opt/${P}/bin/gradle"
 }
