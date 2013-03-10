@@ -31,5 +31,5 @@ src_install() {
 	dobin "${P}/bin/gradle"
 
 	into "/opt/${P}"
-	dolib "${P}/lib/*.jar"
+	dolib "${P}"/lib/*.jar
 }
