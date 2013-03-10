@@ -15,8 +15,8 @@ LICENSE="ASL"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
 IUSE=""
+REQUIRED_USE="binary"
 
-# NOTE: you need the java-overlay for this ebuild to work
 RDEPEND=""
 DEPEND="${RDEPEND}
 	>=virtual/jre-1.6
@@ -26,9 +26,10 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}"
 
 src_install() {
-	echo -e "#!/bin/sh\nexec sh /usr/share/${P}/bin/gradle \${@+\"\$@\"}" > gradle
-	dobin gradle
+	#echo -e "#!/bin/sh\nexec sh /usr/share/${P}/bin/gradle \${@+\"\$@\"}" > gradle
+	#dobin gradle
+	dobin "${P}/bin/gradle"
 
-	insinto /usr/share
-	doins -r "${P}"
+	into "/opt/${P}"
+	dolib -r "${P}/lib"
 }
