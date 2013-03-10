@@ -34,5 +34,5 @@ src_install() {
 	doins -r "${P}/lib"
 	doins -r "${P}/bin"
 
-	dosym /usr/bin/gradle "/opt/${P}/bin/gradle"
+	dosym "/opt/${P}/bin/gradle" /usr/bin/gradle
 }
