@@ -23,3 +23,8 @@ src_compile() {
 	emake
 	ruby ./minirake
 }
+
+src_install() {
+	dodoc AUTHORS ChangeLog NEWS README.md TODO doc/compile/README.md doc/mrbgems/README.md CONTRIBUTING.md
+	dobin bin/mirb bin/mrbc bin/mruby
+}
