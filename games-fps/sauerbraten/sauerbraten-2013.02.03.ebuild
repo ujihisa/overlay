@@ -35,7 +35,8 @@ src_prepare() {
 
 	# Patch makefile to use system enet instead of bundled
 	# respect CXXFLAGS, LDFLAGS
-	epatch "${FILESDIR}"/${P}-{system-enet,QA,master}.patch
+	#epatch "${FILESDIR}"/${P}-{system-enet,QA,master}.patch
+	epatch "${FILESDIR}"/${P}-{system-enet,QA}.patch
 
 	# Fix links so they point to the correct directory
 	sed -i \
