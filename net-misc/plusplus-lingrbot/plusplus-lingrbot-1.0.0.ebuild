@@ -16,16 +16,12 @@ IUSE=""
 DEPEND=""
 RDEPEND="|| ( >=virtual/jre-1.5 >=virtual/jdk-1.5 )"
 
-S="${WORKDER}"
-
-src_unpack() {
-	cp ${DISTDIR}/${P}-standalone.jar ${WORKDIR}/${P}-standalone.jar
-}
+S="${WORKDIR}"
 
 src_install() {
 	echo -e "#!/bin/sh\nexec java -jar /opt/${P}/lib64/${P}-standalone.jar" > plusplus-lingrbot
 	dobin plusplus-lingrbot
-	echo -e "{}" > plusplus.json
+	#echo -e "{}" > plusplus.json
 
 	into "/opt/${P}"
 	dolib "${P}-standalone.jar"
