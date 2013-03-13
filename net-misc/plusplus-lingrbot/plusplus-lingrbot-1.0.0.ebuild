@@ -18,6 +18,10 @@ RDEPEND="|| ( >=virtual/jre-1.5 >=virtual/jdk-1.5 )"
 
 S="${WORKDIR}"
 
+src_unpack() {
+	cp ${DISTDIR}/${P}-standalone.jar ${WORKDIR}/${P}-standalone.jar
+}
+
 src_install() {
 	echo -e "#!/bin/sh\nexec java -jar /opt/${P}/lib64/${P}-standalone.jar" > plusplus-lingrbot
 	dobin plusplus-lingrbot
