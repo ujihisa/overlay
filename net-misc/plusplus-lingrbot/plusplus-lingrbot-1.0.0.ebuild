@@ -6,7 +6,7 @@ EAPI=5
 
 DESCRIPTION=""
 HOMEPAGE="https://github.com/van-clj/plusplus-lingrbot"
-SRC_URI="http://van-clj.github.com/plusplus-lingrbot/lingr-plusplus-bot-${PV}-standalone.jar"
+SRC_URI="http://van-clj.github.com/plusplus-lingrbot/lingr-plusplus-bot-${PV}-standalone.jar -> ${P}-standalone.jar"
 
 LICENSE="EPL-1.0"
 SLOT="0"
@@ -19,10 +19,10 @@ RDEPEND="|| ( >=virtual/jre-1.5 >=virtual/jdk-1.5 )"
 S="${WORKDER}"
 
 src_install() {
-	echo -e "#!/bin/sh\nexec java -jar /opt/${P}/lib64/plusplus-lingrbot-1.0.0-standalone.jar" > plusplus-lingrbot
+	echo -e "#!/bin/sh\nexec java -jar /opt/${P}/lib64/${P}-standalone.jar" > plusplus-lingrbot
 	dobin plusplus-lingrbot
 	echo -e "{}" > plusplus.json
 
 	into "/opt/${P}"
-	dolib "${P}/plusplus-lingrbot-1.0.0-standalone.jar"
+	dolib "${P}-standalone.jar"
 }
