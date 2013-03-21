@@ -24,7 +24,7 @@ S=${WORKDIR}
 
 src_install() {
 	insinto "/usr/lib/systemd/system/"
-	mv "${FILESDIR}/openvpn_at.service" "openvpn@.service"
+	cp "${FILESDIR}/openvpn_at.service" "openvpn@.service"
 	doins "openvpn@.service"
 	doins "${FILESDIR}/postgresql.service"
 }
