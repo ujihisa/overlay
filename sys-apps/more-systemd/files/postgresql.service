@@ -1,0 +1,9 @@
+[Unit]
+Description=PostgreSQL
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/sudo -u postgres postgres -D /var/lib/postgresql/9.2/data -c config_file=/etc/postgresql-9.2/postgresql.conf -c hba_file=/etc/postgresql-9.2/pg_hba.conf -c ident_file=/etc/postgresql-9.2/pg_ident.conf -c unix_socket_directory=/tmp
+
+[Install]
+WantedBy=multi-user.target

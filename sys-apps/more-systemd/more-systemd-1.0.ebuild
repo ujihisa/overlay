@@ -16,10 +16,14 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-src_compile() {
-	echo 'compile'
-}
+S=${WORKDIR}
+
+# src_compile() {
+# 	echo 1
+# }
 
 src_install() {
-	echo 'install'
+	insinto "/usr/lib/systemd/system/"
+	doins "${FILESDIR}/openvpn@.service"
+	doins "${FILESDIR}/postgresql.service"
 }

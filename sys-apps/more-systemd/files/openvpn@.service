@@ -1,0 +1,10 @@
+[Unit]
+Description=Openvpn Service %I
+Requires=network.target
+After=network.target
+
+[Service]
+Type=simple
+ExecStartPre=/bin/mkdir -p "/var/run/openvpn/%I"
+ExecStart=/usr/sbin/openvpn --user openvpn --group openvpn --chroot /var/run/openvpn --config "/etc/openvpn/%I.conf" --cd /etc/openvpn
+ExecReload=/bin/kill -HUP $MAINPID
