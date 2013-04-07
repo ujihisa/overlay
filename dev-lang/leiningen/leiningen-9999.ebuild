@@ -26,10 +26,11 @@ S="${WORKDIR}"
 
 src_install() {
 	mkdir "${S}/bin"
-	ls -a "${S}/bin"
-	ls -a "${DISTDIR}"
+	#ls -a "${S}/bin"
+	#ls -a "${DISTDIR}"
 	cp "${DISTDIR}/lein" "${S}/bin/"
 	chmod +x "${S}/bin/lein"
+	dobin "bin/lein"
 }
 
 pkg_postinst () {
