@@ -1,0 +1,13 @@
+[Unit]
+Description=Redis
+After=network.target
+
+[Service]
+EnvironmentFile=/etc/conf.d/redis
+WorkingDirectory=/var/lib/redis
+User=redis
+Group=redis
+ExecStart=/usr/sbin/redis-server /etc/redis.conf
+
+[Install]
+WantedBy=multi-user.target
