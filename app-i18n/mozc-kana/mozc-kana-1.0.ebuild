@@ -7,8 +7,9 @@ EAPI=5
 DESCRIPTION="mozc kana layout for us keyboard"
 HOMEPAGE="http://github.com/ujihisa/overlay"
 #SRC_URI=""
+S=${WORKDIR}
 
-LICENSE="GPLv3"
+LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
