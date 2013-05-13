@@ -11,7 +11,7 @@ LICENSE="BSD"
 DESCRIPTION="sbt is a build tool for Scala and Java projects that aims to do the basics well"
 HOMEPAGE="http://github.com/harrah/xsbt"
 MY_PN="sbt-launch"
-MY_PV="0.13.0-20120530-052139"
+MY_PV="0.13.0-M2"
 OUT_PN="${MY_PN}-${MY_PV}"
 SRC_URI="http://typesafe.artifactoryonline.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/${MY_PV}/${MY_PN}.jar -> ${OUT_PN}.jar"
 
