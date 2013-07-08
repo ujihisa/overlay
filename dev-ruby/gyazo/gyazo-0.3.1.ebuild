@@ -4,7 +4,7 @@
 
 EAPI=5
 
-USE_RUBY="ruby19"
+USE_RUBY="ruby20"
 DESCRIPTION="Upload an image to Gyazo.com"
 HOMEPAGE="https://github.com/masui/gyazo-ruby"
 SRC_URI="https://rubygems.org/downloads/gyazo-0.3.1.gem"
