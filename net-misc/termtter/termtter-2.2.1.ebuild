@@ -4,9 +4,7 @@
 
 EAPI=5
 
-USE_RUBY="ruby19"
-#RUBY_FAKEGEM_TASK_TEST=""
-RUBY_S="termtter-termtter-2f7c3c8"
+USE_RUBY="ruby20"
 
 RUBY_FAKEGEM_GEMSPEC="termtter.gemspec"
 
@@ -14,19 +12,8 @@ inherit ruby-fakegem
 
 DESCRIPTION="Termtter is a terminal based Twitter client."
 HOMEPAGE="https://github.com/termtter/termtter"
-SRC_URI="https://github.com/termtter/termtter/tarball/ver.${PV} -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
-
-ruby_add_rdepend "dev-ruby/highline
-	dev-ruby/json
-	dev-ruby/notify
-	dev-ruby/rubytter
-	dev-ruby/termcolor"
-
-#each_ruby_install() {
-#	each_fakegem_install
-#}
