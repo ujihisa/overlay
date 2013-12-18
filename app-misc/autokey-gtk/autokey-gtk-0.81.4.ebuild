@@ -4,7 +4,7 @@
 
 EAPI=3
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="A programm for automating tasks in Linux"
 HOMEPAGE="http://autokey.sourceforge.net/"
