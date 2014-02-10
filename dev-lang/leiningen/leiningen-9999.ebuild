@@ -3,13 +3,17 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-python/flask-pymongo/flask-pymongo-0.1.1.ebuild,v 1.1 2012/06/18 08:45:36 ultrabug Exp $
 
 EAPI="5"
-DISTUTILS_SRC_TEST=""
+inherit git-r3
+# DISTUTILS_SRC_TEST=""
 
 MY_P="${MY_PN}-${PV/_/-}"
 
 DESCRIPTION="Automate Clojure projects without setting your hair on fire"
 HOMEPAGE="https://github.com/technomancy/leiningen"
-SRC_URI="https://raw.github.com/technomancy/leiningen/stable/bin/lein"
+# SRC_URI="https://raw.github.com/technomancy/leiningen/stable/bin/lein"
+
+SRC_URI=""
+EGIT_REPO_URI="https://github.com/technomancy/leiningen.git"
 
 LICENSE="EPL"
 SLOT="0"
@@ -25,12 +29,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}"
 
 src_install() {
-	mkdir "${S}/bin"
-	#ls -a "${S}/bin"
-	#ls -a "${DISTDIR}"
-	cp "${DISTDIR}/lein" "${S}/bin/"
-	chmod +x "${S}/bin/lein"
-	dobin "bin/lein"
+	dobin "leiningen-9999/bin/lein"
 }
 
 pkg_postinst () {
