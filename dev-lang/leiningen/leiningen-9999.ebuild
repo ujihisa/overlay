@@ -14,7 +14,7 @@ HOMEPAGE="https://github.com/technomancy/leiningen"
 
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/technomancy/leiningen.git"
-EGIT_COMMIT="2.4.2" # just for now
+EGIT_COMMIT="2.5.0" # just for now
 
 LICENSE="EPL"
 SLOT="0"
