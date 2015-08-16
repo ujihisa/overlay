@@ -14,7 +14,7 @@ HOMEPAGE="https://github.com/technomancy/leiningen"
 
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/technomancy/leiningen.git"
-EGIT_COMMIT="2.5.0" # just for now
+EGIT_COMMIT="2.5.2" # just for now
 
 LICENSE="EPL"
 SLOT="0"
@@ -24,7 +24,7 @@ IUSE=""
 # NOTE: you need the java-overlay for this ebuild to work
 RDEPEND=""
 DEPEND="${RDEPEND}
-	>=virtual/jre-1.6
+	>=virtual/jre-1.8
 	"
 
 S="${WORKDIR}"
