@@ -8,7 +8,9 @@ inherit distutils eutils
 
 DESCRIPTION="A programm for automating tasks in Linux"
 HOMEPAGE="http://autokey.sourceforge.net/"
-SRC_URI="http://autokey.googlecode.com/files/autokey_${PV}.tar.gz"
+# SRC_URI="http://autokey.googlecode.com/files/autokey_${PV}.tar.gz"
+SRC_URI="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/autokey/autokey_${PV}.tar.gz"
+
 
 LICENSE="GPL-3"
 SLOT="0"
