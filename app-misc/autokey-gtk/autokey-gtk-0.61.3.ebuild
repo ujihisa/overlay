@@ -2,9 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI=5
+PYTHON_COMPAT=( python{2_7,3_4} )
 
-inherit distutils
+inherit distutils-r1
 
 DESCRIPTION="A programm for automating tasks in Linux"
 HOMEPAGE="http://autokey.sourceforge.net/"
